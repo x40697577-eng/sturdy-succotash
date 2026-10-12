@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хурсандов Хусан | Репетитор по шахматам</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #fbbf24;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            border: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            border-top: 1px solid #334155;
+            padding-top: 15px;
+        }
+
+        .form-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-section h2 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-section p {
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background-color: #0f172a;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #f59e0b;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #059669;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Хурсандов Хусан</h1>
+            <p>Профессиональный репетитор по шахматам</p>
+        </header>
+
+        <section class="services">
+            <div class="card">
+                <h3>Для детей (с 5 лет)</h3>
+                <p>Игровая форма обучения, развитие концентрации, памяти и базовых шахматных понятий.</p>
+                <div class="price">800 000 – 1 200 000 / мес</div>
+            </div>
+
+            <div class="card">
+                <h3>Для взрослых</h3>
+                <p>Пошаговый разбор дебютов, миттельшпиля и эндшпиля. Повышение рейтинга на платформах Chess.com / Lichess.</p>
+                <div class="price">1 200 000 – 2 000 000 / мес</div>
+            </div>
+
+            <div class="card">
+                <h3>Подготовка к турнирам</h3>
+                <p>Анализ ваших партий, поиск ошибок, психологическая подготовка и выполнение спортивных разрядов.</p>
+                <div class="price">2 000 000 – 3 600 000 / мес</div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Оставить заявку</h2>
+            <p>Заполните форму, и я свяжусь с вами для обсуждения деталей обучения</p>
+            
+            <form id="requestForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required placeholder="Иван">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефона / Telegram</label>
+                    <input type="text" id="phone" required placeholder="+998 (XX) XXX-XX-XX">
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Направление обучения</label>
+                    <select id="program">
+                        <option value="children">Для детей (с 5 лет)</option>
+                        <option value="adults">Для взрослых</option>
+                        <option value="tournaments">Подготовка к турнирам</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Комментарий (необязательно)</label>
+                    <textarea id="message" rows="3" placeholder="Например: удобное время для занятий или текущий уровень игры"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+
+            <div id="successBlock" class="success-message">
+                Спасибо! Заявка успешно отправлена. Я свяжусь с вами в ближайшее время.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            document.getElementById('requestForm').style.display = 'none';
+            document.getElementById('successBlock').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
